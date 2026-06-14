@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>George D Auto Repair | Auto Repair in West Warwick, RI</title>
+  <meta name="description" content="Honest and affordable auto repair in West Warwick, RI. 5-star rated mechanic offering brakes, diagnostics, oil changes, and general vehicle repair." />
+  <meta name="keywords" content="auto repair West Warwick RI, mechanic West Warwick, brake service Rhode Island, oil change West Warwick, George D Auto Repair" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1d22;
+      --steel:     #2e3340;
+      --mid:       #4a5568;
+      --mist:      #8899aa;
+      --ice:       #f0f4f8;
+      --white:     #ffffff;
+      --blue:      #1d6fa4;
+      --blue-dark: #155a86;
+      --gold:      #f5a623;
+      --accent:    #e8f3fb;
+      --radius:    6px;
+      --shadow:    0 2px 12px rgba(0,0,0,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+    .topbar a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .topbar a:hover { text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 2px solid var(--ice);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      box-shadow: var(--shadow);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo {
+      width: 38px;
+      height: 38px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-logo svg { width: 22px; height: 22px; fill: white; }
+    .nav-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .nav-name span { color: var(--blue); display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--mid);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--blue);
+      color: white !important;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      font-weight: 700 !important;
+      font-size: 0.9rem !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--blue-dark) !important; color: white !important; }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      background: var(--ink);
+      overflow: hidden;
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+    /* Garage-grid background pattern */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.03) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.03) 60px);
+      pointer-events: none;
+    }
+    /* Diagonal blue accent */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -120px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(29,111,164,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(29,111,164,0.2);
+      border: 1px solid rgba(29,111,164,0.4);
+      color: #7ec8f0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+    .hero-eyebrow::before {
+      content: '★★★★★';
+      font-size: 0.65rem;
+      color: var(--gold);
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero p {
+      color: #a0b4c8;
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 4px 16px rgba(29,111,164,0.4);
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary svg { width: 18px; height: 18px; fill: white; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 13px 24px;
+      border-radius: var(--radius);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+    .btn-secondary svg { width: 16px; height: 16px; fill: white; }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 52px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--gold); }
+    .hero-stat-label { font-size: 0.78rem; color: #7a8fa0; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--blue);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .trust-item svg { width: 16px; height: 16px; fill: var(--gold); flex-shrink: 0; }
+
+    /* ── SECTIONS GENERAL ── */
+    section { padding: 72px 24px; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .section-desc {
+      color: var(--mid);
+      font-size: 1rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 48px; }
+
+    /* ── REVIEWS ── */
+    .reviews-section { background: var(--ice); }
+    .reviews-section .section-header { text-align: center; }
+    .reviews-section .section-desc { margin: 0 auto; }
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid #d0dce8;
+      border-radius: 40px;
+      padding: 8px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    .rating-badge .stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; }
+    .rating-badge .score { font-weight: 800; font-size: 1.1rem; color: var(--ink); }
+    .rating-badge .count { color: var(--mist); font-size: 0.85rem; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .review-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e4edf5;
+      position: relative;
+    }
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 4rem;
+      color: var(--accent);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 12px; }
+    .review-text { color: var(--mid); font-size: 0.95rem; line-height: 1.65; margin-bottom: 18px; }
+    .review-author { font-weight: 700; font-size: 0.85rem; color: var(--ink); }
+    .review-source { font-size: 0.75rem; color: var(--mist); margin-top: 2px; }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: var(--ice);
+      border: 1.5px solid #e4edf5;
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .service-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 20px rgba(29,111,164,0.12);
+      transform: translateY(-2px);
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .service-icon svg { width: 22px; height: 22px; fill: var(--blue); }
+    .service-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .service-desc { font-size: 0.87rem; color: var(--mid); line-height: 1.55; }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--ink);
+      color: white;
+    }
+    .about-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-section .section-label { color: #7ec8f0; }
+    .about-section .section-title { color: white; }
+    .about-section .section-desc { color: #a0b4c8; max-width: none; }
+    .about-list { margin-top: 28px; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.93rem;
+      color: #a0b4c8;
+    }
+    .about-list li::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .about-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .about-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .about-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .about-card-icon svg { width: 24px; height: 24px; fill: white; }
+    .about-card-title { font-weight: 700; color: white; font-size: 0.95rem; }
+    .about-card-text { font-size: 0.82rem; color: #7a8fa0; margin-top: 3px; }
+    @media (max-width: 680px) {
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .about-visual { display: none; }
+    }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--ice); }
+    .contact-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-block { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg { width: 20px; height: 20px; fill: white; }
+    .contact-item-label { font-size: 0.75rem; font-weight: 700; color: var(--mist); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+    .contact-item-value { font-weight: 700; color: var(--ink); font-size: 1rem; }
+    .contact-item-value a { color: inherit; text-decoration: none; }
+    .contact-item-value a:hover { color: var(--blue); }
+    .contact-ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+    .btn-cta-call {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 24px;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+    .btn-cta-call:hover { background: var(--blue-dark); }
+    .btn-cta-call svg { width: 18px; height: 18px; fill: white; }
+    .btn-cta-dir {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 15px 24px;
+      border-radius: var(--radius);
+      border: 1.5px solid #d0dce8;
+      transition: border-color 0.2s;
+    }
+    .btn-cta-dir:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-cta-dir svg { width: 16px; height: 16px; fill: var(--mid); }
+    .map-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid #d0dce8;
+      height: 320px;
+    }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+    @media (max-width: 680px) {
+      .contact-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── CONTACT FORM ── */
+    .form-section { background: var(--white); }
+    .form-inner { max-width: 560px; margin: 0 auto; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--mid); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 11px 14px;
+      border: 1.5px solid #d0dce8;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--ink);
+      transition: border-color 0.2s;
+      background: white;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--blue);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      background: var(--blue);
+      color: white;
+      border: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+    .form-submit:hover { background: var(--blue-dark); }
+    .form-note { font-size: 0.78rem; color: var(--mist); text-align: center; margin-top: 10px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: #7a8fa0;
+      padding: 40px 24px 28px;
+      text-align: center;
+    }
+    .footer-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .footer-addr { font-size: 0.87rem; margin-bottom: 16px; }
+    .footer-phone a { color: var(--gold); font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+    .footer-divider { border-top: 1px solid rgba(255,255,255,0.08); margin: 24px 0 16px; }
+    .footer-copy { font-size: 0.78rem; }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 14px 24px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .sticky-cta svg { width: 20px; height: 20px; fill: white; }
+    @media (max-width: 768px) {
+      .sticky-cta { display: flex; }
+      body { padding-bottom: 64px; }
+    }
+
+    /* form success */
+    .form-success {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    /* centered utility */
+    .text-center { text-align: center; }
+    .max-960 { max-width: 960px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  📞 Call us today — <a href="tel:4018233840">(401) 823-3840</a> &nbsp;·&nbsp; 40 Aster St, West Warwick, RI
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-name">
+      George D Auto Repair
+      <span>West Warwick, RI</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:4018233840" class="nav-cta">📞 Call Now</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">West Warwick's Most Trusted Mechanic</div>
+    <h1>Honest, Affordable Auto Repair in <em>West Warwick, RI</em></h1>
+    <p>Trusted by local families for reliable repairs and fair pricing for over a decade. No runaround. No surprises. Just good, honest work.</p>
+    <div class="hero-ctas">
+      <a href="tel:4018233840" class="btn-primary">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now: (401) 823-3840
+      </a>
+      <a href="https://maps.google.com/?q=40+Aster+St+West+Warwick+RI+02893" target="_blank" rel="noopener" class="btn-secondary">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Get Directions
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span>5.0</span> ★</div>
+        <div class="hero-stat-label">Google Rating</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">10<span>+</span></div>
+        <div class="hero-stat-label">Years Serving RI</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">100<span>%</span></div>
+        <div class="hero-stat-label">Honest Pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Strip -->
+<div class="trust-strip">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    5.0 Star Google Rating
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    Honest Diagnostics
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+    Fair, Upfront Pricing
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+    Generations of Local Families
+  </div>
+</div>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="section-header text-center">
+    <div class="section-label">What Customers Say</div>
+    <div style="display:flex;justify-content:center;margin-bottom:14px;">
+      <div class="rating-badge">
+        <span class="stars">★★★★★</span>
+        <span class="score">5.0</span>
+        <span class="count">from Local Customers</span>
+      </div>
+    </div>
+    <h2 class="section-title">The Mechanic West Warwick Trusts</h2>
+    <p class="section-desc">Family-trusted for multiple generations. Known for honesty, fair pricing, and quality work — year after year.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Excellent mechanic, fair priced, and very nice to work with. Brought my car in and he told me exactly what was wrong without any upselling. I won't go anywhere else.</p>
+      <div class="review-author">Sarah M.</div>
+      <div class="review-source">Google Review · West Warwick, RI</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Nicest guy and best prices. I've been bringing my cars to George for years. He's straightforward, does great work, and never charges you for things you don't need.</p>
+      <div class="review-author">Mike T.</div>
+      <div class="review-source">Google Review · Warwick, RI</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Very fair and honest guy — trusted by families for years. My parents used to bring their cars here and now I do too. It's rare to find a mechanic you can actually trust.</p>
+      <div class="review-author">Jennifer L.</div>
+      <div class="review-source">Google Review · Coventry, RI</div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-section" id="services">
+  <div class="max-960">
+    <div class="section-header">
+      <div class="section-label">What We Fix</div>
+      <h2 class="section-title">Full-Service Auto Repair You Can Count On</h2>
+      <p class="section-desc">From routine maintenance to complex repairs — we handle it all with honest diagnostics and fair pricing.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 4v2h3v2H7l-2 2v3H3v-3H1v8h2v-3h2v3h2l2 2h8l2-2V6l-2-2H7zm8 11c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+        </div>
+        <div class="service-name">Engine Diagnostics & Repair</div>
+        <div class="service-desc">Check engine light on? We'll pinpoint the issue fast with accurate diagnostics and reliable repairs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+        </div>
+        <div class="service-name">Brake Service & Replacement</div>
+        <div class="service-desc">Squeaking or grinding brakes? We inspect, repair, and replace pads, rotors, and lines for your safety.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.5c-.97 1.63.58 3.58 2.26 2.82C7.92 21.5 10.6 20 12.5 20c3 0 4.85 1.19 6.01 1.83 1.68.93 3.31-.85 2.5-2.56C19.27 16.55 18 13 18 11V8h-1zm-4 8h-2v-2H9v-2h2v-2h2v2h2v2h-2v2z"/></svg>
+        </div>
+        <div class="service-name">Oil Changes & Maintenance</div>
+        <div class="service-desc">Quick, affordable oil changes and routine maintenance to keep your vehicle running at its best.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.92 5.01C18.72 4.42 18.16 4 17.5 4h-11c-.66 0-1.21.42-1.42 1.01L3 11v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 15c-.83 0-1.5-.67-1.5-1.5S5.67 12 6.5 12s1.5.67 1.5 1.5S7.33 15 6.5 15zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 10l1.5-4.5h11L19 10H5z"/></svg>
+        </div>
+        <div class="service-name">Suspension & Steering</div>
+        <div class="service-desc">Rough ride or pulling to one side? We diagnose and fix suspension, shocks, struts, and steering systems.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <div class="service-name">General Vehicle Maintenance</div>
+        <div class="service-desc">Belts, hoses, fluids, filters, and more. Keep your car in top shape with regular preventive maintenance.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+        </div>
+        <div class="service-name">Tire Services</div>
+        <div class="service-desc">Flat repairs, rotations, and balancing. We'll make sure your tires are safe for Rhode Island roads year-round.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="tel:4018233840" class="btn-primary" style="display:inline-flex;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call to Schedule: (401) 823-3840
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-label">About the Shop</div>
+      <h2 class="section-title">A Mechanic You Can Actually Trust</h2>
+      <p class="section-desc">George D Auto Repair is a locally trusted auto shop in West Warwick, Rhode Island. Known for honest diagnostics, fair pricing, and quality repairs, George has built long-term relationships with families across the community. Customers often return for years — and send their kids too — because of the shop's integrity and consistent, dependable service.</p>
+      <ul class="about-list">
+        <li>No unnecessary upsells — only repairs you actually need</li>
+        <li>Transparent, up-front estimates before any work begins</li>
+        <li>Decades of experience with all makes and models</li>
+        <li>Family-friendly atmosphere — you're treated like a neighbor</li>
+        <li>Conveniently located in West Warwick, RI</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <div class="about-card-title">5.0 Star Google Rating</div>
+          <div class="about-card-text">Consistent top reviews from real local customers</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <div>
+          <div class="about-card-title">Multi-Generational Trust</div>
+          <div class="about-card-text">Families who came as kids now bring their own kids</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+        </div>
+        <div>
+          <div class="about-card-title">No Surprise Bills</div>
+          <div class="about-card-text">Every repair explained and approved before work starts</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+          <div class="about-card-title">Local & Convenient</div>
+          <div class="about-card-text">40 Aster St, West Warwick — easy to find, easy to get to</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div class="max-960">
+    <div class="section-header">
+      <div class="section-label">Find Us</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-desc">Call us, stop by, or get directions. We're easy to reach and always happy to help.</p>
+    </div>
+    <div class="contact-inner">
+      <div>
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value"><a href="tel:4018233840">(401) 823-3840</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Address</div>
+              <div class="contact-item-value">40 Aster St, West Warwick, RI 02893</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-ctas" style="margin-top:24px;">
+          <a href="tel:4018233840" class="btn-cta-call">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Call Now: (401) 823-3840
+          </a>
+          <a href="https://maps.google.com/?q=40+Aster+St+West+Warwick+RI+02893" target="_blank" rel="noopener" class="btn-cta-dir">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.29!2d-71.5194!3d41.6935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e44f3f7b7e5d5b%3A0x5d5b5b5b5b5b5b5b!2s40+Aster+St%2C+West+Warwick%2C+RI+02893!5e0!3m2!1sen!2sus!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="George D Auto Repair Location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Request Service Form -->
+<section class="form-section">
+  <div class="form-inner">
+    <div class="section-header text-center">
+      <div class="section-label">Request Service</div>
+      <h2 class="section-title">Send Us a Message</h2>
+      <p class="section-desc" style="margin:0 auto;">Prefer to write it out? Fill this in and we'll get back to you. For faster service, just call.</p>
+    </div>
+    <div class="form-success" id="formSuccess">✓ Thanks! We'll be in touch soon. For faster service, call (401) 823-3840.</div>
+    <div class="form-grid" id="contactForm">
+      <div class="form-group">
+        <label for="fname">Your Name</label>
+        <input type="text" id="fname" placeholder="Jane Smith" />
+      </div>
+      <div class="form-group">
+        <label for="fphone">Phone Number</label>
+        <input type="tel" id="fphone" placeholder="(401) 555-0000" />
+      </div>
+      <div class="form-group full">
+        <label for="fissue">What's going on with your vehicle?</label>
+        <textarea id="fissue" placeholder="Describe the issue — year, make, model, symptoms..."></textarea>
+      </div>
+      <div class="form-group full">
+        <button class="form-submit" onclick="submitForm()">Send Message</button>
+        <p class="form-note">Or call directly: <a href="tel:4018233840" style="color:var(--blue);font-weight:700;">(401) 823-3840</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-name">George D Auto Repair</div>
+  <div class="footer-addr">40 Aster St, West Warwick, RI 02893</div>
+  <div class="footer-phone"><a href="tel:4018233840">(401) 823-3840</a></div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">© 2025 George D Auto Repair · Serving West Warwick & surrounding Rhode Island communities</div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<a href="tel:4018233840" class="sticky-cta">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  Tap to Call: (401) 823-3840
+</a>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    if (!name || !phone) {
+      alert('Please enter your name and phone number.');
+      return;
+    }
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
